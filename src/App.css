@@ -1,38 +1,127 @@
-.App {
-  text-align: center;
+.sell {
+    position: relative;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.cards {
+    position: relative;
+    box-shadow: 10px 24px 54px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.8s ease;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.cards:first-child {
+    color: white;
+    background: #002444;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.cards:hover:first-child {
+    /*background: white;*/
+    /*color: #002444;*/
 }
 
-.App-link {
-  color: #61dafb;
+/* --- Defining the circles width, height and background ---  */
+.cards::before, .cards::after{
+    content: '';
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    position: absolute;
+    opacity: 0.1;
+    background: linear-gradient(137.76deg, #FFFFFF 18.03%, rgba(255, 255, 255, 0) 92.51%);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* --- Positioning the circles --- */
+.cards::before {
+    top: 0;
+    right: 20px;
+    transform: translate(80px, -60px);
+    transition: all 0.8s ease;
+}
+
+.cards::after {
+    bottom: 0;
+    left: 25px;
+    transform: translate(-80px, 60px);
+    transition: all 0.8s ease;
+}
+
+/* --- Positioning the circles on HOVER --- */
+.cards:hover::before {
+    transform: translate(40px, -20px);
+}
+
+.cards:hover::after {
+    transform: translate(-40px, 20px);
+}
+
+.sell::before {
+    content: "";
+    background: #f9f9f9;
+    border-radius: 50%;
+    z-index: -1;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: -20px;
+    left: -35px;
+}
+
+/*---- SLIDER -----*/
+
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.prev-btn {
+    left: 50px;
+}
+
+.next-btn {
+    right: 50px;
+}
+
+.swiper {
+    position: relative !important;
+}
+
+.swiper-pagination {
+    background: transparent !important;
+    z-index: 2;
+    position: absolute !important;
+    margin-top: 20px !important;
+}
+
+/* ----- SWIPER PAGINATION -----*/
+.swiper-pagination-bullet {
+    height: 8px !important;
+    width: 8px !important;
+    background: #00CEDE;
+    border-radius: 100px !important;
+    transition: all 0.4s ease-out !important;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #00CEDE !important;
+    width: 3rem !important;
+}
+
+@media screen and (max-width: 600px) {
+    .sell::before {
+        content: "";
+        background: #f9f9f9;
+        border-radius: 50%;
+        z-index: -1;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: -15px;
+        left: -25px;
+    }
+
+    .cards {
+        width:90%;
+        margin: 0 auto;
+    }
 }
