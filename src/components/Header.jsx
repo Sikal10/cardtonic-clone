@@ -28,7 +28,7 @@ const Header = () => {
                       <MdOutlineMenu />
                   </button>
 
-                  {isMobile && <div className={"fixed top-0 left-0 w-screen flex flex-col justify-center h-screen overflow-y-hidden bg-[#002444]"}>
+                  {isMobile && <div className={"fixed top-0 left-0 w-screen flex flex-col justify-center h-screen overflow-y-hidden bg-[#002444] z-10"}>
                       <button onClick={closeMobileNavigation} className={"fixed top-10 right-7 text-3xl bg-[#CFFCFF] rounded-full grid place-items-center w-[50px] h-[50px]"}>
                           <MdOutlineClose />
                       </button>
