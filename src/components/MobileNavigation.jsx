@@ -1,10 +1,21 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {Twirl as Hamburger} from "hamburger-react";
 import {AnimatePresence, motion} from "framer-motion";
 
-const MobileNavigation = ({isMobile, setIsMobile, boxVariant}) => {
+const MobileNavigation = ({boxVariant}) => {
     const [isFirstMobileButtonClicked, setIsFirstMobileButtonClicked] = useState(false);
     const [isSecondMobileButtonClicked, setIsSecondMobileButtonClicked] = useState(false);
+    const [isThirdMobileButtonClicked, setIsThirdMobileButtonClicked] = useState(false);
+
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        if (isMobile) {
+            document.body.classList.add("overlay");
+        } else {
+            document.body.classList.remove("overlay");
+        }
+    }, [isMobile])
 
     return (
         <div className={"md:hidden relative"}>
@@ -52,12 +63,12 @@ const MobileNavigation = ({isMobile, setIsMobile, boxVariant}) => {
                             <div className={"space-y-4"}>
                                 <div className={"text-white font-medium text-lg relative"}>
                                     <button
-                                        onClick={() => setIsSecondMobileButtonClicked(!isSecondMobileButtonClicked)}>
+                                        onClick={() => setIsThirdMobileButtonClicked(!isThirdMobileButtonClicked)}>
                                         Get Started
                                     </button>
                                 </div>
 
-                                {isSecondMobileButtonClicked && <div
+                                {isThirdMobileButtonClicked && <div
                                     className={"bg-[#002444] flex flex-col border text-[14px] space-y-4 text-gray-400"}>
                                     <p>On the Web</p>
                                     <p>On Android</p>

@@ -3,17 +3,45 @@ import {MdOutlineMarkEmailUnread} from "react-icons/md";
 import {FiHeart} from "react-icons/fi";
 import {TbWorld} from "react-icons/tb";
 import {AiFillAndroid, AiOutlineApple} from "react-icons/ai";
+import {useState} from "react";
 
-const DesktopNavigation = ({handleToggleBox, isFirstBoxClicked, isSecondBoxClicked, isThirdBoxClicked}) => {
+const DesktopNavigation = () => {
+
+    const [isFirstBoxClicked, setIsFirstBoxClicked] = useState(false);
+    const [isSecondBoxClicked, setIsSecondBoxClicked] = useState(false);
+    const [isThirdBoxClicked, setIsThirdBoxClicked] = useState(false);
+
+    const handleToggleBox = (boxNumber) => {
+        switch (boxNumber) {
+            case "first":
+                setIsFirstBoxClicked(!isFirstBoxClicked);
+                setIsSecondBoxClicked(false);
+                setIsThirdBoxClicked(false);
+                break;
+            case "second":
+                setIsFirstBoxClicked(false);
+                setIsSecondBoxClicked(!isSecondBoxClicked);
+                setIsThirdBoxClicked(false);
+                break;
+            case "third":
+                setIsFirstBoxClicked(false);
+                setIsSecondBoxClicked(false);
+                setIsThirdBoxClicked(!isThirdBoxClicked);
+                break;
+            default:
+                setIsFirstBoxClicked(false);
+                setIsSecondBoxClicked(false);
+                setIsThirdBoxClicked(false);
+        }
+    }
+
     return (
-        <div className={"hidden md:block space-x-12"}>
+        <div className={"hidden md:block"}>
             <div className={"flex items-center gap-x-12"}>
                 <button className={"text-[#002444] font-medium text-lg"}>Upskill</button>
 
                 <div className={"relative"}>
-                    <button
-                        onClick={() => handleToggleBox("first")}
-                        className={"text-[#002444] font-medium text-lg gap-2 flex items-center"}>
+                    <button onClick={() => handleToggleBox("first")} className={"text-[#002444] font-medium text-lg gap-2 flex items-center"}>
                         Customers
                         <span><IoChevronDownSharp className={"text-sm"}/></span>
                     </button>

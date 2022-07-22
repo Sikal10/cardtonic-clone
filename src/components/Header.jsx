@@ -1,37 +1,9 @@
 import logo from "../assets/images/logo.svg";
 import React, {useState} from "react";
-import {motion} from "framer-motion";
 import DesktopNavigation from "./DesktopNavigation";
 import MobileNavigation from "./MobileNavigation";
 
-const Header = ({isMobile, setIsMobile}) => {
-    const [isFirstBoxClicked, setIsFirstBoxClicked] = useState(false);
-    const [isSecondBoxClicked, setIsSecondBoxClicked] = useState(false);
-    const [isThirdBoxClicked, setIsThirdBoxClicked] = useState(false);
-
-    const handleToggleBox = (boxNumber) => {
-        switch (boxNumber) {
-            case "first":
-                setIsFirstBoxClicked(!isFirstBoxClicked);
-                setIsSecondBoxClicked(false);
-                setIsThirdBoxClicked(false);
-                break;
-            case "second":
-                setIsFirstBoxClicked(false);
-                setIsSecondBoxClicked(!isSecondBoxClicked);
-                setIsThirdBoxClicked(false);
-                break;
-            case "third":
-                setIsFirstBoxClicked(false);
-                setIsSecondBoxClicked(false);
-                setIsThirdBoxClicked(!isThirdBoxClicked);
-                break;
-            default:
-                setIsFirstBoxClicked(false);
-                setIsSecondBoxClicked(false);
-                setIsThirdBoxClicked(false);
-        }
-    }
+const Header = () => {
 
     /** framer motion styling */
     const boxVariant = {
@@ -52,18 +24,9 @@ const Header = ({isMobile, setIsMobile}) => {
                     <img src={logo} alt=""/>
                 </div>
 
-                <DesktopNavigation
-                    handleToggleBox={handleToggleBox}
-                    isFirstBoxClicked={isFirstBoxClicked}
-                    isSecondBoxClicked={isSecondBoxClicked}
-                    isThirdBoxClicked={isThirdBoxClicked}
-                />
+                <DesktopNavigation />
 
-                <MobileNavigation
-                    boxVariant={boxVariant}
-                    isMobile={isMobile}
-                    setIsMobile={setIsMobile}
-                />
+                <MobileNavigation boxVariant={boxVariant} />
             </div>
         </header>
     );
