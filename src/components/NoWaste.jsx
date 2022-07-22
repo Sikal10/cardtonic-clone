@@ -22,7 +22,7 @@ const NoWaste = () => {
                         </h2>
                     </div>
 
-                    <div className="hidden md:block border border-black border-opacity-50 border-r h-[170px]"/>
+                    <div style={{height: "180px"}} className={"line hidden md:block"}/>
 
                     <div className={"space-y-3 mt-[30px] md:mt-0 md:w-[49%] font-serif"}>
                         <p className={"md:text-[17px] text-[15px] font-serif font-[400] text-[#1b507e]"}>About $3 billion worth of gift cards were unused last year.
@@ -32,7 +32,7 @@ const NoWaste = () => {
                         </p>
 
                         <p className={"md:text-[17px] text-[15px] font-serif font-[400] text-[#1b507e]"}>
-                            Cardtonic also allows users to <br/> sell gift cards in Ghana and Nigeria with instant payment settlement.
+                            Cardtonic also allows users to <br/> <b>sell gift cards in Ghana</b> and Nigeria with instant payment settlement.
                             With this innovative provision, gift cards will never go to waste,
                             even when they cannot be used in certain areas of the world, they can be sold at the best possible gift card rates.
                         </p>

@@ -1,4 +1,4 @@
-import GooglePlay from "../assets/images/GooglePlay.svg";
+import GooglePlay from "../assets/images/google-play.svg";
 import AppStore from "../assets/images/app-store.svg";
 import Web from "../assets/images/web.svg";
 
