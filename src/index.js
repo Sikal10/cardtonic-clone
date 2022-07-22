@@ -2,9 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import {IntercomProvider, useIntercom} from 'react-use-intercom';
+import {IntercomProvider} from 'react-use-intercom';
 
-const INTERCOM_APP_ID = '55679875';
+const INTERCOM_APP_ID = 'a8p2mvpt';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
