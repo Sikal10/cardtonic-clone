@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components  {
+    .nav-button {
+        @apply text-[#002444] font-medium text-lg;
+    }
+
+    .get-started-btn {
+        @apply bg-[#FFEACA] text-[#002444] font-medium w-[160px] py-[15px] rounded-xl gap-2 flex items-center justify-center;
+    }
+
+    .dropdown-box {
+        @apply z-10 top-[45px] -left-[55px] bg-white absolute px-[30px] w-[200px] py-[18px] space-y-7 rounded-2xl;
+    }
+
+    .mobile-menu {
+        @apply text-white font-medium text-lg flex items-center gap-2 relative;
+    }
+
+    .mobile-dropDown {
+        @apply bg-[#002444] flex flex-col text-[14px] space-y-4 text-gray-400;
+    }
+}

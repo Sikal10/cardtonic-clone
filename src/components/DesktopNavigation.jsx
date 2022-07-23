@@ -38,16 +38,15 @@ const DesktopNavigation = () => {
     return (
         <div className={"hidden md:block"}>
             <div className={"flex items-center gap-x-12"}>
-                <button className={"text-[#002444] font-medium text-lg"}>Upskill</button>
+                <button className={"nav-button"}>Upskill</button>
 
                 <div className={"relative"}>
-                    <button onClick={() => handleToggleBox("first")} className={"text-[#002444] font-medium text-lg gap-2 flex items-center"}>
+                    <button onClick={() => handleToggleBox("first")} className={"nav-button gap-2 flex items-center"}>
                         Customers
                         <span><IoChevronDownSharp className={"text-sm"}/></span>
                     </button>
 
-                    {isFirstBoxClicked && <div
-                        className={"z-10 top-[45px] -left-[55px] bg-white absolute px-[30px] box w-[200px] py-[18px] space-y-7 rounded-2xl"}>
+                    {isFirstBoxClicked && <div className={"dropdown-box box"}>
                         <div className={"flex gap-2 items-center"}>
                             <div
                                 className={"bg-red-300 bg-opacity-30 h-[25px] w-[25px] grid place-items-center rounded-full"}>
@@ -76,13 +75,12 @@ const DesktopNavigation = () => {
 
                 <div className={"relative"}>
                     <button onClick={() => handleToggleBox("second")}
-                            className={"text-[#002444] font-medium text-lg gap-2 flex items-center"}>
+                            className={"nav-button gap-2 flex items-center"}>
                         Business
                         <span><IoChevronDownSharp className={"text-sm"}/></span>
                     </button>
 
-                    {isSecondBoxClicked && <div
-                        className={"z-10 bg-white absolute top-[45px] -left-[55px] box w-[200px] px-[23px] py-[18px] space-y-7 rounded-2xl"}>
+                    {isSecondBoxClicked && <div className={"dropdown-box box px-[23px]"}>
                         <div className={"flex gap-3 items-center"}>
                             <div
                                 className={"bg-red-300 bg-opacity-30 h-[25px] w-[25px] grid place-items-center rounded-full"}>
@@ -100,8 +98,7 @@ const DesktopNavigation = () => {
                         </div>
 
                         <div className={"flex gap-3 items-center"}>
-                            <div
-                                className={"bg-cyan-300 bg-opacity-30 h-[25px] w-[25px] grid place-items-center rounded-full"}>
+                            <div className={"bg-cyan-300 bg-opacity-30 h-[25px] w-[25px] grid place-items-center rounded-full"}>
                                 <IoShapesOutline className={"text-cyan-600 text-lg"}/>
                             </div>
                             <p className={"text-[13px] text-[#002444] font-semibold"}>Work With Us</p>
@@ -110,14 +107,12 @@ const DesktopNavigation = () => {
                 </div>
 
                 <div className={"relative"}>
-                    <button onClick={() => handleToggleBox("third")}
-                            className={"bg-[#FFEACA] text-[#002444] font-medium w-[160px] py-[15px] rounded-xl gap-2 flex items-center justify-center"}>
+                    <button onClick={() => handleToggleBox("third")} className={"get-started-btn"}>
                         Get Started
                         <span><IoChevronDownSharp className={"text-sm"}/></span>
                     </button>
 
-                    {isThirdBoxClicked && <div
-                        className={"z-10 top-[75px] bg-white absolute px-[30px] box w-[170px] py-[18px] space-y-7 rounded-2xl"}>
+                    {isThirdBoxClicked && <div className={"z-10 top-[75px] bg-white absolute px-[30px] box w-[170px] py-[18px] space-y-7 rounded-2xl"}>
                         <div className={"flex gap-2 items-center"}>
                             <div
                                 className={"bg-red-300 bg-opacity-30 h-[25px] w-[25px] grid place-items-center rounded-full"}>

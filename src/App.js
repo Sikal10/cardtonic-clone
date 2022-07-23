@@ -9,6 +9,7 @@ function App() {
     useEffect(() => {
         boot();
     }, [boot]);
+
     return (
         <div>
             <Home/>
