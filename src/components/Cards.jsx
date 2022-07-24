@@ -18,7 +18,7 @@ const Cards = () => {
             </div>
 
             <div className={"cards hover:bg-[#002444] hover:text-white w-[21.5rem] min-h-[230px] py-[14px] px-[13px] rounded-[25px] space-y-2"}>
-                <img src={Checked} alt=""/>
+                <img className={"mt-2"} src={Checked} alt=""/>
                 <h3 className={"text-[14px] font-bold"}>Trusted And Secure</h3>
                 <p className={"text-[13.3px] w-[95%]"}>Trade with high confidence, as we assure you the highest level of encryption and professionally audited exchange system.</p>
             </div>
