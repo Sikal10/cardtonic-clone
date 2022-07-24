@@ -1,18 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+body {
+    font-family: "Lato";
+}
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer components  {
     .nav-button {
-        @apply text-[#002444] font-medium text-lg;
+        @apply text-[#002444] font-bold text-lg;
     }
 
     .get-started-btn {
-        @apply bg-[#FFEACA] text-[#002444] font-medium w-[160px] py-[15px] rounded-xl gap-2 flex items-center justify-center;
+        @apply bg-[#FFEACA] text-[#002444] font-bold w-[160px] py-[15px] rounded-xl gap-2 flex items-center justify-center;
     }
 
     .dropdown-box {
-        @apply z-10 top-[45px] -left-[55px] bg-white absolute px-[30px] w-[200px] py-[18px] space-y-7 rounded-2xl;
+        @apply z-10 top-[45px] -left-[50px] bg-white absolute px-[30px] w-[200px] py-[18px] space-y-7 rounded-2xl;
     }
 
     .mobile-menu {

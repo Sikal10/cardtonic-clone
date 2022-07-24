@@ -24,20 +24,20 @@ const NoWaste = () => {
 
                     <div style={{height: "180px"}} className={"line hidden md:block"}/>
 
-                    <div className={"space-y-3 mt-[30px] md:mt-0 md:w-[49%] font-serif"}>
-                        <p className={"md:text-[17px] text-[15px] font-serif font-[400] text-[#1b507e]"}>About $3 billion worth of gift cards were unused last year.
+                    <div className={"space-y-3 mt-[30px] md:mt-0 md:w-[49%]"}>
+                        <p className={"md:text-[17px] text-[15px] font-[400] text-[#1b507e]"}>About $3 billion worth of gift cards were unused last year.
                             This means a lot of people get hold of gift cards they never need,
                             or never use up the balance of a gift card, which is wasteful.
                             Until recently, that was a major problem, which is where Cardtonic steps in as the knight in shining armor.
                         </p>
 
-                        <p className={"md:text-[17px] text-[15px] font-serif font-[400] text-[#1b507e]"}>
+                        <p className={"md:text-[17px] text-[15px] font-[400] text-[#1b507e]"}>
                             Cardtonic also allows users to <br/> <b>sell gift cards in Ghana</b> and Nigeria with instant payment settlement.
                             With this innovative provision, gift cards will never go to waste,
                             even when they cannot be used in certain areas of the world, they can be sold at the best possible gift card rates.
                         </p>
 
-                        <p className={"md:text-[17px] text-[15px] font-serif font-[400] text-[#1b507e]"}>
+                        <p className={"md:text-[17px] text-[15px] font-[400] text-[#1b507e]"}>
                             With Cardtonic, you can trade gift cards including but not limited to iTunes, Amazon, Steam Wallet, Google Play,
                             Apple Store, eBay, Walmart, Sephora, OneVanilla, Nordstrom, Target, JCPenney, Best Buy, Nike, Hotels.com,
                             Macy's, Gamestop, Xbox,Vanilla, G2A, American Express (AMEX), OffGamers, Foot Locker,Visa, Play Station and others.

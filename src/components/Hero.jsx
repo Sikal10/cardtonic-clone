@@ -40,7 +40,7 @@ const Hero = () => {
                 <Cards />
 
                 <div className={"mt-[60px] grid place-items-center"}>
-                    <button className={"bg-[#F0F0F0] text-[#0024444] font-semibold w-[170px] rounded-[15px] h-[55px]"}>Register Now</button>
+                    <button className={"bg-[#F0F0F0] font-black text-[#0024444] w-[170px] rounded-[15px] h-[55px]"}>Register Now</button>
                 </div>
             </div>
         </section>
